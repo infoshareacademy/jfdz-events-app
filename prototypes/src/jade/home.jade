@@ -1,0 +1,18 @@
+extends layouts/bootstrap
+  
+block body
+  .container
+    .row
+      .col-md-6 Text for first col
+      .col-md-6 
+        p Text for second col
+          button.btn.btn-danger Destroy
+    .row
+      .col-md-4(style="background: #000;")
+      .col-md-4
+        include components/form
+      .col-md-4
+        include components/form
+
+block nav
+  include components/nav.html
