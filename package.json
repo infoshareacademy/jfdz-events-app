@@ -1,5 +1,5 @@
 {
-  "name": "ex-2",
+  "name": "jfdz-events-app",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -7,6 +7,11 @@
     "start": "gulp",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/infoshareacademy/jfdz-events-app.git"
+  },
+
   "author": "",
   "license": "ISC",
   "dependencies": {
@@ -14,7 +19,6 @@
   },
   "devDependencies": {
     "bootstrap-sass": "^3.3.6",
-    "eyeglass": "^0.8.3",
     "gulp": "^3.9.1",
     "gulp-jade": "^1.1.0",
     "gulp-sass": "^2.2.0",
