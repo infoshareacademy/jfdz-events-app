@@ -2,10 +2,20 @@
 
 .panel.panel-info
     .panel-heading
-        h3(style="margin-top:5px;")
+        h4(style="margin-top:5px;")
             span(class='glyphicon glyphicon-calendar' aria-hidden='true')
-            span=' Wydarzenie'
+            span=' Co?'
         img(class="img-responsive" src="http://i.telegraph.co.uk/multimedia/archive/02602/premier-league_2602603b.jpg")
     .panel-body
-        span #{txt}
-    script(type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCRngKslUGJTlibkQ3FkfTxj3Xss1UlZDA&amp;sensor=false")
+        h6 #{txt}
+    .panel-heading
+        h4
+            span=' Gdzie?'
+    .panel-body
+        #map(style="height: 200px;width:100%")
+        script(src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAy8bREp6zCP8JoQiU6a4QVxFIFWgKTJ4k&callback=initMap" async defer)
+    .panel-heading
+        h4
+            span=' Kiedy?'
+    .panel-body
+        h6 #{txt}
