@@ -1,3 +1,8 @@
+.responsive-calendar {
+  font-family: "Courier New";
+  font-size: 40px;
+}
+
 .responsive-calendar .controls {
   text-align: center;
 }
@@ -14,7 +19,7 @@
 .responsive-calendar .day {
   display: inline-block;
   position: relative;
-  font-size: 14px;
+  font-size: 18px;
   width: 14.285714285714286%;
   text-align: center;
 }
