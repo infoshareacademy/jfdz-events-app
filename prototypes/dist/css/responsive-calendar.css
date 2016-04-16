@@ -5,6 +5,8 @@
 
 .responsive-calendar .controls {
   text-align: center;
+  height: 100px;
+  line-height: 100px;
 }
 .responsive-calendar .controls a {
   cursor: pointer;
@@ -22,6 +24,7 @@
   font-size: 18px;
   width: 14.285714285714286%;
   text-align: center;
+  border: 1px solid black;
 }
 .responsive-calendar .day a {
   color: #000000;
@@ -34,7 +37,9 @@
   text-decoration: none;
 }
 .responsive-calendar .day.header {
-  border-bottom: 1px gray solid;
+  border: none;
+  height: 40px;
+  line-height: 40px;
 }
 .responsive-calendar .day.active a {
   background-color: #1d86c8;
