@@ -4,43 +4,132 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="viewport" content="initial-scale=1.0">
     <title>Kalendarz imprez</title>
     <link rel="stylesheet" href="css/main.css">
+    <script src="js/jquery.js"></script>
+    <script src="js/main.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
   </head>
   <body>
     <div class="container">
       <div class="row">
-        <div class="col-lg-12 col-md-12 col-xs-12"></div>
-      </div>
+        <div class="col-lg-8 col-md-12 col-xs-12">
+<div class="container">
+  <div class="row">
+    <div class="col-lg-12 col-md-12 col-xs-12  menu">
       <div class="row">
-        <div class="col-lg-12 col-md-8 col-xs-8"></div>
-        <div class="col-lg-4 col-md-4 col-xs-4">
-          <div class="panel panel-info">
-            <div class="panel-heading">
-              <h4 style="margin-top:5px;"><span aria-hidden="true" class="glyphicon glyphicon-calendar"></span><span> Co?</span></h4><img src="http://i.telegraph.co.uk/multimedia/archive/02602/premier-league_2602603b.jpg" class="img-responsive">
-            </div>
-            <div class="panel-body">
-              <h6>Lorem ipsum dolor sit amet enim. Etiam ullamcorper. Suspendisse a pellentesque dui, non felis. Maecenas malesuada elit lectus felis, malesuada ultricies. Curabitur et ligula. Ut molestie a, ultricies porta urna. Vestibulum commodo volutpat a, convallis ac, laoreet enim. Phasellus fermentum in, dolor. Pellentesque facilisis. Nulla imperdiet sit amet magna. Vestibulum dapibus, mauris nec malesuada fames ac turpis velit, rhoncus eu, luctus et interdum adipiscing wisi. Aliquam erat ac ipsum. Integer aliquam purus.</h6>
-            </div>
-            <div class="panel-heading">
-              <h4><span> Gdzie?</span></h4>
-            </div>
-            <div class="panel-body">
-              <div id="map" style="height: 200px;width:100%"></div>
-              <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAy8bREp6zCP8JoQiU6a4QVxFIFWgKTJ4k&amp;callback=initMap" async defer></script>
-            </div>
-            <div class="panel-heading">
-              <h4><span> Kiedy?</span></h4>
-            </div>
-            <div class="panel-body">
-              <h6>Lorem ipsum dolor sit amet enim. Etiam ullamcorper. Suspendisse a pellentesque dui, non felis. Maecenas malesuada elit lectus felis, malesuada ultricies. Curabitur et ligula. Ut molestie a, ultricies porta urna. Vestibulum commodo volutpat a, convallis ac, laoreet enim. Phasellus fermentum in, dolor. Pellentesque facilisis. Nulla imperdiet sit amet magna. Vestibulum dapibus, mauris nec malesuada fames ac turpis velit, rhoncus eu, luctus et interdum adipiscing wisi. Aliquam erat ac ipsum. Integer aliquam purus.</h6>
-            </div>
+        <div class="col-lg-2 col-md-2 col-xs-2"></div>
+        <div class="col-lg-1 col-md-1 col-xs-1">
+          <div class="checkbox">
+            <label class="checkbox"><input type="checkbox">Dzieci</label>
           </div>
         </div>
+        <div class="col-lg-1 col-md-1 col-xs-1">
+          <div class="checkbox">
+            <label class="checkbox"><input type="checkbox">Koncerty</label>
+          </div>
+        </div>
+        <div class="col-lg-1 col-md-1 col-xs-1">
+          <div class="checkbox">
+            <label class="checkbox"><input type="checkbox">Spektakle</label>
+          </div>
+        </div>
+        <div class="col-lg-1 col-md-1 col-xs-1">
+          <div class="checkbox">
+            <label class="checkbox"><input type="checkbox">Wystawy</label>
+          </div>
+        </div>
+        <div class="col-lg-1 col-md-1 col-xs-1">
+          <div class="checkbox">
+            <label class="checkbox"><input type="checkbox">Sport</label>
+          </div>
+        </div>
+        <div class="col-lg-1 col-md-1 col-xs-1">
+          <div class="checkbox">
+            <label class="checkbox"><input type="checkbox">Kino</label>
+          </div>
+        </div>
+        <div class="col-lg-1 col-md-1 col-xs-1">
+          <div class="checkbox">
+            <label class="checkbox"><input type="checkbox">Free</label>
+          </div>
+        </div>
+        <div class="col-lg-2 col-md-2 col-xs-2">
+          <div class="button">
+            <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+              Szukaj</span>
+            </button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+<style>
+
+  .menu{
+    background-color: #E76F3B;
+    height: 80px;
+    margin-top: 60px;
+    margin-bottom: 30px;
+    padding-top: 20px;
+    border-radius: 5px;
+  }
+  .button{
+    padding-bottom: 20px;
+  }
+</style>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-8 col-md-8 col-xs-8"><!--<div class="container">-->
+    <!-- Responsive calendar - START rrrrrr -->
+    <div class="responsive-calendar">
+        <div class="controls">
+            <a class="pull-left" data-go="prev"><div class="btn btn-primary"><<</div></a>
+            <h4><span data-head-year></span> <span data-head-month></span></h4>
+            <a class="pull-right" data-go="next"><div class="btn btn-primary">>></div></a>
+        </div><hr/>
+        <div class="day-headers">
+            <div class="day header">Pon</div>
+            <div class="day header">Wt</div>
+            <div class="day header">Śr</div>
+            <div class="day header">Czw</div>
+            <div class="day header">Pt</div>
+            <div class="day header">Sb</div>
+            <div class="day header">Nd</div>
+        </div>
+        <div class="days" data-group="days">
+
+        </div>
+    </div>
+    <!-- Responsive calendar - END -->
+<!--</div>-->
+
+<link href="css/responsive-calendar.css" rel="stylesheet">
+
+
+<script src="js/responsive-calendar.js"></script>
+<script type="text/javascript">
+
+
+    $(document).ready(function () {
+        $(".responsive-calendar").responsiveCalendar({
+            time: (new Date()).getFullYear() + '-' + ((new Date()).getMonth()+1) ,
+            events: {
+                "2013-04-30": {"number": 5, "url": "http://w3widgets.com/responsive-slider"},
+                "2013-04-26": {"number": 1, "url": "http://w3widgets.com"},
+                "2013-05-03":{"number": 1},
+                "2013-06-12": {}}
+        });
+    });
+</script>
+
+        </div>
+        <div class="col-lg-4 col-md-4 col-xs-4"></div>
       </div>
     </div>
   </body>
-  <script src="js/jquery.js"></script>
-  <script src="js/main.js"></script>
 </html>

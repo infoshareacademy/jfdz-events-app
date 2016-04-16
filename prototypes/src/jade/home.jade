@@ -2,11 +2,13 @@ extends layouts/bootstrap
 
 block nav
     .row
-        .col-lg-12.col-md-12.col-xs-12
+        .col-lg-8.col-md-12.col-xs-12
+            include components/nav.html
 
 block main
     .row
-        .col-lg-12.col-md-8.col-xs-8
+        .col-lg-8.col-md-8.col-xs-8
+            include components/calendar.html
         .col-lg-4.col-md-4.col-xs-4
           include components/detailEvent
 
