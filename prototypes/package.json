@@ -1,5 +1,5 @@
 {
-  "name": "prototype",
+  "name": "ex-2",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -10,6 +10,8 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "gulp-cli": "^1.2.1",
+    "angular": "^1.5.3",
     "node-sass": "^3.4.2"
   },
   "devDependencies": {
