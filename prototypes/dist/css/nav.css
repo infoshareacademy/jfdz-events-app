@@ -1,0 +1,16 @@
+
+.menu{
+    height: 120px;
+    padding-top: 20px;
+    background-color: #00b3ee;
+    color:white;
+}
+.button{
+    padding-bottom: 20px;
+}
+
+@media screen and (max-width: 699px) and (min-width: 520px){
+    menu{
+        height: 40px;
+    }
+}
