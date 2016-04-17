@@ -10,10 +10,17 @@
 }
 .responsive-calendar .controls a {
   cursor: pointer;
+  height: 0;
 }
+
 .responsive-calendar .controls h4 {
   display: inline;
+  text-align: left;
+  font-size: 40px;
 }
+@media (max-width:550px) {.responsive-calendar .controls h4 {
+  font-size: 30px;
+}}
 .responsive-calendar .day-headers,
 .responsive-calendar .days {
   font-size: 0;
