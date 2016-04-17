@@ -4,13 +4,23 @@
     padding-top: 20px;
     background-color: #00b3ee;
     color:white;
+    font-family: "Courier New";
 }
 .button{
-    padding-bottom: 20px;
+    padding-bottom: 30px;
+    margin-top: 10px;
 }
 
 @media screen and (max-width: 699px) and (min-width: 520px){
     menu{
         height: 40px;
     }
+}
+.checkbox{
+    background-color: #bcdff5;
+    width: 100px;
+    height: 33px;
+    margin-right: 10px;
+    margin-left: 10px;
+
 }
