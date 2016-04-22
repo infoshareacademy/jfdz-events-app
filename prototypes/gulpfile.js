@@ -14,7 +14,7 @@ var eyeglass = new Eyeglass({
 });
 
 gulp.task('templates', function() {
-  gulp.src('./src/jade/*.jade')
+  gulp.src(['./src/jade/*.jade', './src/jade/preview/*.jade'])
     .pipe(jade({
       pretty: true,
       locals: {
@@ -32,8 +32,14 @@ gulp.task('js', function () {
   return gulp.src('./src/js/**/*.js', {base: './src'})
     .pipe(gulp.dest('./dist/'));
 });
+
 gulp.task('js:watch', ['js'], function () {
-  gulp.watch('./src/js/**/*.js', ['js']);
+    gulp.watch('./src/js/**/*.js', ['js']);
+});
+
+gulp.task('bootstrap', function () {
+  return gulp.src('./node_modules/bootstrap-sass/assets/fonts/**/*', {base: './node_modules/bootstrap-sass/assets/'})
+    .pipe(gulp.dest('./dist/'));
 });
 
 gulp.task('sass', function () {
@@ -48,4 +54,4 @@ gulp.task('sass:watch', ['sass'], function () {
   gulp.watch('./src/sass/**/*.scss', ['sass']);
 });
 
-gulp.task('default', ['js:watch', 'sass:watch', 'templates:watch']);
+gulp.task('default', ['js:watch', 'sass:watch', 'templates:watch','bootstrap']);
