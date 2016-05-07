@@ -30,13 +30,36 @@
 
 
     $(document).ready(function () {
+
+        function addLeadingZero(num) {
+            if (num < 10) {
+                return "0" + num;
+            } else {
+                return "" + num;
+            }
+        }
+
         $(".responsive-calendar").responsiveCalendar({
-            time: (new Date()).getFullYear() + '-' + ((new Date()).getMonth()+1) ,
+            onActiveDayClick: function (events, e) {
+                console.log('kliknieto dzien', events)
+
+                var thisDayEvent, key;
+
+                key = $(this).data('year')+'-'+addLeadingZero( $(this).data('month') )+'-'+addLeadingZero( $(this).data('day') );
+                array_date=(key.split("-"));
+//                thisDayEvent = events[key];
+
+                $('.panel-heading').append('<img class="img-responsive" src="pics/'+array_date[2]+'_'+array_date[1]+' />');
+            },
+
+            time: (new Date()).getFullYear() + '-' + ((new Date()).getMonth()+1),
             events: {
-                "2013-04-30": {"number": 5, "url": "http://w3widgets.com/responsive-slider"},
-                "2013-04-26": {"number": 1, "url": "http://w3widgets.com"},
-                "2013-05-03":{"number": 1},
-                "2013-06-12": {}}
+                "2016-05-30": {"number": 'Dzieci'},
+                "2016-05-26": {"number": 'Free'},
+                "2016-05-03":{"number": 'Sport'},
+                "2016-05-13":{"number": 'Koncert'},
+                "2016-05-12": {"number": 'Wystawa'}
+            }
         });
     });
 </script>
