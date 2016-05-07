@@ -1,6 +1,6 @@
 
 .menu{
-    height: 120px;
+    height: 200px;
     padding-top: 20px;
     background-color: #00b3ee;
     color:white;
@@ -18,9 +18,9 @@
 }
 .checkbox{
     background-color: #bcdff5;
-    width: 100px;
+    min-width: 100px;
     height: 33px;
     margin-right: 10px;
     margin-left: 10px;
-
+    line-height: normal;
 }
