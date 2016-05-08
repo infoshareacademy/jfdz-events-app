@@ -1,21 +1,28 @@
 
 .menu{
-    height: 200px;
+    min-height: 100px;
     padding-top: 20px;
     background-color: #00b3ee;
     color:white;
     font-family: "Courier New";
+    margin-bottom: 20px;
 }
 .button{
     padding-bottom: 30px;
     margin-top: 10px;
+
+}
+.test2{
+    background-color:#bcdff5;
+    color: whitesmoke;
+
 }
 
-@media screen and (max-width: 699px) and (min-width: 520px){
-    menu{
-        height: 40px;
-    }
-}
+/*@media screen and (max-width: 699px) and (min-width: 520px){*/
+    /*menu{*/
+        /*height: 40px;*/
+    /*}*/
+/*}*/
 .checkbox{
     background-color: #bcdff5;
     min-width: 100px;
@@ -23,4 +30,12 @@
     margin-right: 10px;
     margin-left: 10px;
     line-height: normal;
+    border-radius: 5px;
+
+}
+p{
+    padding-top: 10px;
+}
+input{
+    padding-top: 10px;
 }
