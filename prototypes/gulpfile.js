@@ -54,4 +54,9 @@ gulp.task('sass:watch', ['sass'], function () {
   gulp.watch('./src/sass/**/*.scss', ['sass']);
 });
 
-gulp.task('default', ['js:watch', 'sass:watch', 'templates:watch','bootstrap']);
+gulp.task('copyAssets', function() {
+    gulp.src(['./src/assets/**'])
+        .pipe(gulp.dest('./dist/assets/'));
+});
+
+gulp.task('default', ['js:watch', 'sass:watch', 'templates:watch','bootstrap', 'copyAssets']);

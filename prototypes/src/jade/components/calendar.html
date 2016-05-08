@@ -46,10 +46,16 @@
                 var thisDayEvent, key;
 
                 key = $(this).data('year')+'-'+addLeadingZero( $(this).data('month') )+'-'+addLeadingZero( $(this).data('day') );
-                array_date=(key.split("-"));
+                var array_date=(key.split("-"));
 //                thisDayEvent = events[key];
 
-                $('.panel-heading').append('<img class="img-responsive" src="pics/'+array_date[2]+'_'+array_date[1]+' />');
+
+                $('#myImg').html('<img class="img-responsive" src="assets/'
+                        + array_date[2]
+                        + '_'
+                        + array_date[1]
+                        + '.jpg'
+                        + '" />');
             },
 
             time: (new Date()).getFullYear() + '-' + ((new Date()).getMonth()+1),

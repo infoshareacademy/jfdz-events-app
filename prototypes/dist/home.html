@@ -190,10 +190,16 @@
                 var thisDayEvent, key;
 
                 key = $(this).data('year')+'-'+addLeadingZero( $(this).data('month') )+'-'+addLeadingZero( $(this).data('day') );
-                array_date=(key.split("-"));
+                var array_date=(key.split("-"));
 //                thisDayEvent = events[key];
 
-                $('.panel-heading').append('<img class="img-responsive" src="pics/'+array_date[2]+_+array_date[1]+' />')
+
+                $('#myImg').html('<img class="img-responsive" src="assets/'
+                        + array_date[2]
+                        + '_'
+                        + array_date[1]
+                        + '.jpg'
+                        + '" />');
             },
 
             time: (new Date()).getFullYear() + '-' + ((new Date()).getMonth()+1),
@@ -211,8 +217,9 @@
         </div>
         <div class="col-lg-4 col-md-4 col-xs-12">
           <div class="panel panel-info">
-            <div class="panel-heading">
+            <div id="foto" class="panel-heading">
               <h4 style="margin-top:5px;"><span aria-hidden="true" class="glyphicon glyphicon-calendar"></span><span> Co?</span></h4>
+              <div id="myImg"></div>
               <!--img(class="img-responsive" src="http://i.telegraph.co.uk/multimedia/archive/02602/premier-league_2602603b.jpg")-->
             </div>
             <div class="panel-body">
