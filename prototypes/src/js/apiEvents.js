@@ -3,44 +3,24 @@
  */
 
 var root = 'http://jsonplaceholder.typicode.com/posts/';
-$.ajax({
-    url: root,
-    method: 'GET'
+var eventDay=function(){
+    $.ajax({
+        url: root+selectedDay,
+        method: 'GET'
     }).then(function(data) {
-        $(".responsive-calendar").responsiveCalendar({
-        //time: '2016-05',
-        events: {
-            "2016-05-30": {
-                "number": 5,
-                "badgeClass": "badge-warning",
-                "url": "http://w3widgets.com/responsive-calendar"
-                //"dayEvents": [
-                //    {
-                //        "name": data[0].title,
-                //        "hour": "12:22"
-                //    }
-                //]},
-            }
-        }});
-        //console.log(data[0].title);
+        console.log(data);
     });
+};
 
-//reakcja na kliknięcie
+var selectedDay = 0;
 
-//$( document ).ready( function() {
-//    $(".responsive-calendar").responsiveCalendar({
-//        //time: '2016-05',
-//        events: {
-//            "2016-05-30": {
-//                "number": 5,
-//                "badgeClass": "badge-warning",
-//                "url": "http://w3widgets.com/responsive-calendar"
-//                //"dayEvents": [
-//                //    {
-//                //        "name"
-//                //    }
-//                //]},
-//            }
-//        }
-//    })
-//})
+$( document ).ready(function() {
+    $('.responsive-calendar').responsiveCalendar();
+
+    $('.responsive-calendar').on('click', '.day', function(event){
+        selectedDay = $( 'a', event.currentTarget).attr('data-day') ;
+            eventDay();
+
+        }
+    );
+});
