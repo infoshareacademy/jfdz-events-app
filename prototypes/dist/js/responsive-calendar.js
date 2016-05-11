@@ -352,8 +352,7 @@
       });
     };
     $.fn.responsiveCalendar.defaults = {
-      translateMonths: ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"],
-      events: {},
+      translateMonths: ["STYCZEŃ", "LUTY", "MARZEC", "KWIECIEŃ", "MAJ", "CZERWIEC", "LIPIEC", "SIERPIEŃ", "WRZESIEŃ", "PAŹDZIERNIK", "LISTOPAD", "GRUDZIEŃ"], events: {},
       time: void 0,
       allRows: true,
       startFromSunday: false,
