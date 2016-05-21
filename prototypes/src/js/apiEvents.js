@@ -31,6 +31,8 @@ var writeEvent=function(item){
     $('#what').text(item.description);
 };
 
+
+
 var root = 'http://isa-api-sl.herokuapp.com/api/events/';
 var eventDay=function(dateCalendar){
     $.ajax({
@@ -46,7 +48,11 @@ var eventDay=function(dateCalendar){
         });
     });
 };
+ $('.menu input[type="checkbox"]').click( function() {
 
+ })
+
+;
 $( document ).ready(function() {
     loadEvents();
 
@@ -60,4 +66,8 @@ $( document ).ready(function() {
             eventDay(selectedYear+'-'+selectedMonth+'-'+selectedDay);
         }
     );
+
+
+
+
 });
