@@ -71,7 +71,7 @@
   right: 2px;
   z-index: 1;
 }
-.menu input[type="checkbox"]:checked {
+.red {
   background-color: red;
-  color: red;
+  /*color: red;*/
 }

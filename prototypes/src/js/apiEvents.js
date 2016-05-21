@@ -16,7 +16,7 @@ function loadEvents() {
         $.each(data,function(i, item){
             var str=item.startsAt;
             var dateEvent=str.slice(0,10);
-            console.log(dateEvent, item)
+            //console.log(dateEvent, item)
             events[dateEvent] = {
                 number: item.type,
                 "badgeClass": item.type
@@ -48,13 +48,12 @@ var eventDay=function(dateCalendar){
         });
     });
 };
- $('.menu input[type="checkbox"]').click( function() {
 
- })
 
-;
+
 $( document ).ready(function() {
     loadEvents();
+    $('*').removeClass('red');
 
     $('.responsive-calendar').on('click', '.day', function(event){
         selectedYear = $( 'a', event.currentTarget).attr('data-year');
@@ -67,7 +66,13 @@ $( document ).ready(function() {
         }
     );
 
-
+    $('.menu input[type="checkbox"]').change( function() {
+        var id=$(this).attr('id');
+        console.log(id);
+        var aloha = $('span.' + id.toLowerCase());
+        console.log(aloha);
+        aloha.toggleClass('red');
+    })
 
 
 });
