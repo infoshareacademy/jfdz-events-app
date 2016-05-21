@@ -3,7 +3,7 @@
  */
 
 var writeEvent=function(item){
-    $('#foto').attr('src',item.image)
+    $('#foto').attr('src',item.image);
     $('#header').text(' '+item.title);
     $('#what').text(item.description);
 };
@@ -25,7 +25,14 @@ var eventDay=function(dateCalendar){
 };
 
 $( document ).ready(function() {
-    $('.responsive-calendar').responsiveCalendar();
+    $('.responsive-calendar').responsiveCalendar({
+                //time: (new Date()).getFullYear() + '-' + ((new Date()).getMonth()+1) ,
+                events: {
+                    "2016-04-30": {"number": 5, "url": "http://w3widgets.com/responsive-slider"},
+                    "2016-04-26": {"number": 1, "url": "http://w3widgets.com"},
+                    "2016-05-03":{"number": 1},
+                    "2016-06-12": {}}
+            });
 
     $('.responsive-calendar').on('click', '.day', function(event){
         selectedYear = $( 'a', event.currentTarget).attr('data-year');
