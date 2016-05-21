@@ -1,0 +1,73 @@
+.responsive-calendar {
+  font-family: "Courier New";
+  font-size: 40px;
+}
+
+.responsive-calendar .controls {
+  text-align: center;
+  height: 100px;
+  line-height: 100px;
+}
+.responsive-calendar .controls a {
+  cursor: pointer;
+  height: 0;
+}
+
+.responsive-calendar .controls h4 {
+  display: inline;
+  text-align: left;
+  font-size: 40px;
+}
+@media (max-width:550px) {.responsive-calendar .controls h4 {
+  font-size: 30px;
+}}
+.responsive-calendar .day-headers,
+.responsive-calendar .days {
+  font-size: 0;
+}
+.responsive-calendar .day {
+  display: inline-block;
+  position: relative;
+  font-size: 18px;
+  width: 14.285714285714286%;
+  text-align: center;
+  border: 1px solid black;
+}
+.responsive-calendar .day a {
+  color: #000000;
+  display: block;
+  cursor: pointer;
+  padding: 20% 0 20% 0;
+}
+.responsive-calendar .day a:hover {
+  background-color: #eee;
+  text-decoration: none;
+}
+.responsive-calendar .day.header {
+  border: none;
+  height: 40px;
+  line-height: 40px;
+}
+.responsive-calendar .day.active a {
+  background-color: #1d86c8;
+  color: #ffffff;
+}
+.responsive-calendar .day.active a:hover {
+  background-color: #36a0e2;
+}
+.responsive-calendar .day.active .not-current {
+  background-color: #8fcaef;
+  color: #ffffff;
+}
+.responsive-calendar .day.active .not-current:hover {
+  background-color: #bcdff5;
+}
+.responsive-calendar .day.not-current a {
+  color: #ddd;
+}
+.responsive-calendar .day .badge {
+  position: absolute;
+  top: 2px;
+  right: 2px;
+  z-index: 1;
+}
