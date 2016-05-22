@@ -47,13 +47,16 @@ var eventDay=function(dateCalendar){
             if (dateEvent==dateCalendar) writeEvent(item);
         });
     });
+
+
 };
 
 
 
 $( document ).ready(function() {
     loadEvents();
-    $('*').removeClass('red');
+
+
 
     $('.responsive-calendar').on('click', '.day', function(event){
         selectedYear = $( 'a', event.currentTarget).attr('data-year');
@@ -63,8 +66,25 @@ $( document ).ready(function() {
             selectedDay=$( 'a', event.currentTarget).attr('data-day');
             console.log(selectedYear+'-'+selectedMonth+'-'+selectedDay);
             eventDay(selectedYear+'-'+selectedMonth+'-'+selectedDay);
-        }
-    );
+
+
+    });
+
+    $('.btn').click( function() {
+        var table = $('.menu input[type="checkbox"]:checked');
+        var idTable=[];
+        //for (i=0 ; i<table.length ; i++) {
+        //    idTable.push(table[i].att('id'))
+        //}
+        console.log('table: ', table);
+
+
+        $.each(table, function() {
+            console.log($(this).attr('id'));
+            idTable.push($(this).attr('id'));
+        });
+        console.log(idTable);
+    });
 
     $('.menu input[type="checkbox"]').change( function() {
         var id=$(this).attr('id');
