@@ -20,7 +20,7 @@ function loadEvents() {
             events[dateEvent] = {
                 number: item.type,
                 "badgeClass": item.type
-            }
+            };
         });
     });
 }
@@ -68,22 +68,23 @@ $( document ).ready(function() {
             eventDay(selectedYear+'-'+selectedMonth+'-'+selectedDay);
 
 
+
     });
 
-    $('.btn').click( function() {
+    $(window).hover( function() {
         var table = $('.menu input[type="checkbox"]:checked');
         var idTable=[];
-        //for (i=0 ; i<table.length ; i++) {
-        //    idTable.push(table[i].att('id'))
-        //}
-        console.log('table: ', table);
-
 
         $.each(table, function() {
-            console.log($(this).attr('id'));
-            idTable.push($(this).attr('id'));
+             idTable.push($(this).attr('id'));
         });
-        console.log(idTable);
+        for (var i=0 ; i<idTable.length ; i++) {
+            var id = idTable[i];
+            console.log(id);
+            var aloha = $('span.' + id.toLowerCase());
+            console.log(aloha);
+            aloha.addClass('red');
+        }
     });
 
     $('.menu input[type="checkbox"]').change( function() {
